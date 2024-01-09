@@ -13,13 +13,15 @@ class Utills{
   static toastMassage(String massage){
     Fluttertoast.showToast(msg: massage,
     backgroundColor:AppColor.backround,
-      gravity:ToastGravity.CENTER,
+      gravity:ToastGravity.CENTER
 
     );
   }
   static snackBar(String title,String massage){
     Get.snackbar(
-      title,massage
+      
+      title,massage,snackPosition: SnackPosition.BOTTOM,icon: Icon(Icons.add),
+      mainButton: TextButton(onPressed: (){}, child: Text("Click"))
     );
   }
 }

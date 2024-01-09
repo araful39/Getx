@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/part_02/view/page_two.dart';
 class PageOne extends StatefulWidget {
-  const PageOne({super.key});
+  final String name;
+   PageOne({super.key, required this.name});
 
   @override
   State<PageOne> createState() => _PageOneState();
@@ -13,7 +14,7 @@ class _PageOneState extends State<PageOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Page 01"),
+        title: Text("Page 01 ${widget.name}}"),
       ),
       body: Center(
         child: ElevatedButton(onPressed: (){

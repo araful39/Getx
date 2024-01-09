@@ -13,7 +13,7 @@ class AppRoutes {
             transitionDuration: Duration(microseconds: 200),
             transition: Transition.leftToRight),
         GetPage(name: RoutesName.homePage, page: () => HomePage01()),
-        GetPage(name: RoutesName.pageOne, page: () => PageOne()),
+        GetPage(name: RoutesName.pageOne, page: () => PageOne(name: '',)),
         GetPage(name: RoutesName.pageTwo, page: () => PageTwo()),
       ];
 }

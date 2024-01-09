@@ -10,6 +10,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
+  showD(String text){
+    showDialog(context: context, builder: (context){
+      return AlertDialog(
+        title: Text(text),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +30,8 @@ class _SplashScreenState extends State<SplashScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Utills.toastMassage("Md Ariful islam");
+          // showD("Hello");
+          Utills.snackBar("Md Araful islam", "Hello");
         },
       ),
     );
