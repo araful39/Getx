@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                         loginController.togglePasswordVisibility();
                       },
                       child: loginController.isTrue.value
-                          ? Text("Show")
+                          ? Text("Showb  ")
                           : Text("Hide"),
                     ),
                     hintText: 'pass_hint'.tr,
