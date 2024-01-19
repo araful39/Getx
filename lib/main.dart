@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/part-08/view/splash_screen.dart';
+import 'package:getx/part-09/view/login_page.dart';
+import 'package:getx/part-09/view/splash_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
-void main() {
+void main() async{
   runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs =await SharedPreferences.getInstance();
+  var email=prefs.getString("email");
+  print(email);
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      home: SplashScreen09(),
       translationsKeys: translations,
       locale: Locale('en', 'US'), // Set the initial locale
     );
